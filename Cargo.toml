@@ -1,0 +1,13 @@
+[package]
+name = "pyo3_multithread_demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["extension-module"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+numpy = "0.20"
+ndarray = "0.15"
+
+[lib]
+crate-type = ["cdylib"]
